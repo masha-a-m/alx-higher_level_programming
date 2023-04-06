@@ -1,0 +1,7 @@
+
+===========================
+How to Use 0-add_integer.py
+===========================
+
+
+This tests directory is showing us how to go about the  integer addition function ``add_integer(a, b=98)``
