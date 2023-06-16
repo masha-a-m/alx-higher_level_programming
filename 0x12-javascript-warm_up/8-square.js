@@ -10,11 +10,10 @@ if (isNaN(size))
 {
   console.log('Missing size');
 } 
-e
-lse 
+else 
 
 {
-  fo r (let r = 0; r < size; r++)  /for let r+0
+  for (let r = 0; r < size; r++);  //for let r+0
 
 
   {
