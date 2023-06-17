@@ -2,24 +2,16 @@
 
 // task 3 java script
 
-
 class Rectangle //class of rectangle 
 {
   constructor (w, h)
-
-	   // constructor w, h
+// constructor w, h
   {
     if ((w > 0) && (h > 0)) //if w> 0, h) 0
 
-
     {
       this.width = w;
-
-//this width = w
       this.height = h;
-
-      //this height = h
-
 
     }
   }
@@ -31,9 +23,9 @@ class Rectangle //class of rectangle
 
 
     {
-      let s = ''; //let s = '';
+      let s = '';
 
-      for (let j = 0; j < this.width; j++) //for let j = 0;
+      for (let j = 0; j < this.width; j++) //for let
       {
         s += 'X';
       }
@@ -49,7 +41,7 @@ class Rectangle //class of rectangle
 
   double () {
     this.width *= 2;
-    this =m 2
+
     this.height *= 2;
   }
 }
