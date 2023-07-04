@@ -14,3 +14,7 @@ x_request_id = response.headers.get('X-Request-Id')
 
 # Display the value of the X-Request-Id variable
 print(f"X-Request-Id: {x_request_id}")
+
+
+ r = requests.get(url)
+    print(r.headers.get("X-Request-Id"))
