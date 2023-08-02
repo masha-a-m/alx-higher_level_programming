@@ -1,35 +1,17 @@
 #!/usr/bin/python3
-
-"""python file liating task 0"""
-
-
+"""
+Lists all states from the database hbtn_0e_0_usa
+"""
 import sys
-
-"""import the sys from """
-
-
 import MySQLdb
 
-"""include three arguments """
-
-
 if __name__ == '__main__':
-
-"""database, name, username, password """
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-
-    """sys argv port"""
+                         db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-
-    """cursor db cir """
-
     cur.execute("SELECT * FROM states;")
+    states = cur.fetchall()
 
-    for state in state:
-
-    """for the state """
-
+    for state in states:
         print(state)
-
-
