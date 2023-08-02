@@ -1,23 +1,20 @@
 #!/usr/bin/python3
-
-""" task 1 statibg all stqtes that begin with n"""
-
-
-import sys 
-
+"""
+Lists all states with a name starting with N
+"""
+import sys
 import MySQLdb
 
-"""then my SQL"""
-
 if __name__ == '__main__':
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], port=3306)
 
-"""password, database, username"""
-
-    db = MySQLdb.connect(user=sys.argv{1}, passwd=sys.argv[2], db=sys.argv[3], port=3306)
-
-    cur.execute()
-	 """cur execute"""
-    
+    cur = db.cursor()
+    cur.execute("SELECT * \
+    FROM states \
+    WHERE CONVERT(`name` USING Latin1) \
+    COLLATE Latin1_General_CS \
+    LIKE 'N%';")
     states = cur.fetchall()
 
     for state in states:
